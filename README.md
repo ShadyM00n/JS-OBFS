@@ -17,11 +17,11 @@
 
 To get started with JS-OBFS, clone the repository and install the dependencies:
 
-+++
-git clone https://github.com/yourusername/js-obfs.git
-cd js-obfs
+```bash
+git clone https://github.com/ShadyM00n/JS-OBFS.git
+cd JS-OBFS
 npm install
-+++
+```
 
 ---
 
@@ -31,29 +31,28 @@ npm install
 
 To obfuscate a single JavaScript file and save the output to another file, use the following code:
 
-+++
+```javascript
 const obfuscate = require('./obfs');
 
 obfuscate.run(__dirname + '/code.js', __dirname + '/show.js');
-+++
+```
 
 ### Obfuscate with Callback
 
 You can also use a callback to handle the obfuscation result:
 
-+++
+```javascript
 obfuscate.run(__dirname + '/code.js', __dirname + '/show.js').then((obf) => {
     console.log(`Output path: ${obf.output}`);
 });
-+++
-
+```
 ### Obfuscate a Directory
 
 To obfuscate all JavaScript files in a directory and preserve the directory structure, use:
 
-+++
+```javascript
 obfuscate.runDirectory(__dirname + '/input-dir', __dirname + '/output-dir');
-+++
+```
 
 ---
 
