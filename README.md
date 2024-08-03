@@ -8,7 +8,6 @@
 
 - **JavaScript Obfuscation:** Secure your JavaScript code by obfuscating it.
 - **File Handling:** Easily handle single files or directories.
-- **Customizable Settings:** Adjust obfuscation settings to fit your needs.
 - **Callback Support:** Use callbacks for handling obfuscation results.
 
 ---
