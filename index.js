@@ -44,5 +44,8 @@ obfuscate.runFile(__dirname + '/code.js', __dirname + '/show.js').then((obf) => 
     console.log(`output path: ${obf.output}`)
 })
 
-// Example of running a directory obfuscation
-obfuscate.runDirectory(__dirname + '/input-dir', __dirname + '/output-dir');
+/* Example of running a directory obfuscation
+*  Copies files even if not javascript or typescript
+*  Doesnt allow node_modules access for compactions and error reduction
+*/
+obfuscate.runDirectory(__dirname + '/test-input', __dirname + '/test-output');
