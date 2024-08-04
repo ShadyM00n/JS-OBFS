@@ -22,6 +22,7 @@
 
 /*
 * Made by ShadyMoon (c)
+* All rights go to ShadyMoon 
 * JS-OBFS 2024 (c)
 */
 const obfuscate = require('./obfs');
@@ -29,9 +30,12 @@ const obfuscate = require('./obfs');
 
 
 // Example of running without callback
-obfuscate.runFile(__dirname + '/code.js', __dirname + '/show.js');
+obfuscate.runFile(__dirname + "\\example.js", __dirname + '\\example2.js');
 
 
+// Example of running without callback with an int
+// # the higher the int the longer it takes
+obfuscate.runFile(__dirname + "\\example.js", __dirname + '\\example2.js', 3);
 
 /* Example of callback function usage
 * 
@@ -40,12 +44,18 @@ obfuscate.runFile(__dirname + '/code.js', __dirname + '/show.js');
 *  output - Returns output path
 *  input - Returns input path
 */
-obfuscate.runFile(__dirname + '/code.js', __dirname + '/show.js').then((obf) => {
+obfuscate.runFile(__dirname + '\\example.js', __dirname + '\\example2.js').then((obf) => {
     console.log(`output path: ${obf.output}`)
 })
+
 
 /* Example of running a directory obfuscation
 *  Copies files even if not javascript or typescript
 *  Doesnt allow node_modules access for compactions and error reduction
 */
-obfuscate.runDirectory(__dirname + '/test-input', __dirname + '/test-output');
+obfuscate.runDirectory(__dirname + `\\input`, __dirname + '\\output');
+
+
+// Example of running a directory obfuscation with an int
+// # the higher the int the longer it takes
+obfuscate.runDirectory(__dirname + `\\input`, __dirname + '\\output', 3);
