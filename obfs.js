@@ -52,31 +52,6 @@ class Obfuscator {
         }
     }
 
-    /**
-     * De-obfuscates and beautifies the JavaScript code from the input file and saves it to the output file.
-     * @param {string} input - The path to the obfuscated JavaScript file.
-     * @param {string} output - The path to the output file where the de-obfuscated code will be saved.
-     * @returns {Promise<object>} - The result containing the de-obfuscated code, input path, and output path.
-     */
-    static async deobfuscateFile(input, output) {
-        try {
-            const exists = await existsFilePath(input);
-            if (!exists) return;
-            const code = await grabFilePath(input);
-            const beautifiedCode = await beautifyCode(code);
-
-            await fs.promises.writeFile(output, beautifiedCode);
-            return {
-                content: beautifiedCode,
-                input: input,
-                output: output
-            };
-        } catch (err) {
-            console.error(`Error in deobfuscateFile: ${err.message}`);
-        }
-    }
-}
-
 /**
  * Obfuscates the given JavaScript code using the JavaScript Obfuscator.
  * @param {string} code - The JavaScript code to obfuscate.
