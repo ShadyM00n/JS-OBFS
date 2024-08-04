@@ -19,7 +19,7 @@ To get started with JS-OBFS, clone the repository and install the dependencies:
 ```bash
 git clone https://github.com/ShadyM00n/JS-OBFS.git
 cd JS-OBFS
-npm install
+npm install javascript-obfuscator path fs js-beautify
 ```
 
 ---
